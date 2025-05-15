@@ -1,0 +1,100 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPIRIT TOYOTA (job Vacancy)
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-container input, .form-container textarea, .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            insert background-image: TOYOTA_LOGO.png ;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>ESPIRIT TOYOTA (JOB Vacancy)</h2>
+        <form id="jobForm" onsubmit="submitForm(event)">
+            <label for="candidate name">candidate name:</label>
+            <input type="text" id="candidate name" name="candidate name" required>
+
+            <label for="experienced in">:</label>experienced in
+            <input type="text" id="experienced in" name="experienced in" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="Address" name="address" required>
+
+            <label for="description">Job Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="contact no."> contact no.:</label>
+            <input type="contact no." id="contact no." name="contact no." required>
+            
+            <label for="Email"> Email:</label>
+            <input type="Email" id="Email" name="Email" required>
+
+            <button type="submit">Submit Job Vacancy</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevents the form from refreshing the page
+
+            const formData = {
+                candidate name: document.getElementById("candidate name").value,
+                experienced in: document.getElementById("experienced in").value,
+                location: document.getElementById("address").value,
+                description: document.getElementById("description").value,
+                contact no.: document.getElementById("contact no.").value
+                 Email: document.getElementById("Email").value
+            };
+
+            console.log("Form Data Submitted:", formData);
+
+            // You can replace this with an actual form submission to a server
+            alert("Job Vacancy Submitted Successfully!");
+
+            // Optionally clear the form after submission
+            document.getElementById("jobForm").reset();
+        }
+    </script>
+</body>
+</html>
